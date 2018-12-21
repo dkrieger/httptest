@@ -85,5 +85,5 @@ func handleDefault(w http.ResponseWriter, req *http.Request) {
 		fmt.Fprintf(w, "Parsing Error")
 		return
 	}
-	fmt.Fprintf(w, "%s %s\nForm:\n%#v\n", req.Method, req.URL, req.Form)
+	fmt.Fprintf(w, "%s %s%s\nForm:\n%#v\n", req.Method, req.Host, req.URL, req.Form)
 }
